@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>VolatileMemoHUD</AssemblyName>
+    <RootNamespace>VolatileMemoHUD</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="AppIcon.ico" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
