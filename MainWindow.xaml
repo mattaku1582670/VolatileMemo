@@ -6,7 +6,7 @@
         Height="320"
         MinWidth="320"
         MinHeight="180"
-        ResizeMode="CanResize"
+        ResizeMode="CanMinimize"
         ShowInTaskbar="False"
         Topmost="True"
         Visibility="Hidden"

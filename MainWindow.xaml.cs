@@ -28,10 +28,17 @@ public partial class MainWindow : Window
         SourceInitialized += OnSourceInitialized;
         KeyDown += OnKeyDown;
         Closing += OnClosing;
+
+        EnsureWindowHandleCreated();
     }
 
     private void OnSourceInitialized(object? sender, EventArgs e)
     {
+        if (_hotKeyService is not null)
+        {
+            return;
+        }
+
         var hwnd = new WindowInteropHelper(this).Handle;
         _hotKeyService = new HotKeyService(hwnd);
         _hotKeyService.HotKeyPressed += (_, _) => ToggleHud();
@@ -42,8 +49,24 @@ public partial class MainWindow : Window
         _hotKeyService.Register();
     }
 
+    private void EnsureWindowHandleCreated()
+    {
+        var interop = new WindowInteropHelper(this);
+        if (interop.Handle == IntPtr.Zero)
+        {
+            interop.EnsureHandle();
+        }
+    }
+
     private void ToggleHud()
     {
+        if (WindowState == WindowState.Minimized)
+        {
+            WindowState = WindowState.Normal;
+            ShowHudNearCursor();
+            return;
+        }
+
         if (IsVisible)
         {
             DiscardAndHide();

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VolatileMemoHUD")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2d24c67b51393928de2418411598f64717f02ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("VolatileMemoHUD")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VolatileMemoHUD")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
